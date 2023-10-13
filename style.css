@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+ @media screen and (min-width: 320px)and (max-width:768px){ 
+body{
+    position: relative;
+} 
+body::before {
+    background: rgb(0, 0, 0, 1.5); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}    
+main{
+    /**/
+    background-image:url(./public/pokemon-fondo.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    border: 3px solid black;
+    padding-top: 5px;
+    gap: 10px;
+}
+section{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px;
+    border: 3px solid yellow;
+}
+.pokemon-container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.pokemon {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /*border: 3px solid white;*/
+}
+.pokemon-container > h3, h4{
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: rgb(59, 58, 58);
+}
+h1{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 5px;
+    border: 3px solid black;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: yellow;
+}
+.search{
+    display: flex;
+    width:299px;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px;
+}
+.search > h3{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+}
+.texto{
+    background-color: transparent;
+    margin-top:20px;
+    width: 80%;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    padding:7px;
+    border-radius: 5px;
+    background-color: rgb(236, 159, 5);
+}
+.texto p{
+    color: black;
+    font-weight: bold;
+}
+ .subtitulo{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 5px;
+    border: 3px solid black;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: yellow;
+}
+.pokemon-search{
+    width: 45px;
+    text-align: center;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 5px;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding:6px;
+    background-color: yellow;
+}
+.search-button{
+    width: 60px;
+    text-align: center;
+    padding:6px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 5px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: yellow;
+    cursor: pointer;
+}
+.imagen-caja{
+ display: flex;
+ flex-wrap:wrap;
+ width: 100%;
+ flex-direction: row;
+}
+.ul-caja{
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+}
+.ul-caja .li-caja{
+    width:30%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+} 
+.ul-caja .li-caja .img-box{
+    width:250px;
+    height:200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius:15px;
+    border: 2px solid black;
+}
+.ul-caja .li-caja .img-box:hover{
+    width:200px;
+    height:200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius:100px;
+}
+.img-box img{
+    width:100%;
+    height:100%;
+    animation: giraY 3s linear infinite;
+    cursor: pointer;
+}
+.img-box img:hover{
+    width:100%;
+    height:100%;
+    animation: giraY 0s linear infinite;
+    cursor: pointer;
+}
+@keyframes giraY {
+    from {
+      transform: rotateY(0deg); 
+    }
+    to {
+      transform: rotateY(360deg);
+     }
+     } 
+.bajo-img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 5px;
+    color: black;
+    border: 3px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    
+    background-color: yellow;
+}
+.bajo-img:hover {
+    display: flex;
+    width: 250px;
+    background-color: gray;
+    border-radius:10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 5px;
+    color:yellow;
+    border: 3px solid black;
+    cursor: pointer;
+    padding: 5px;
+}
+.bajo-img > h4:hover{
+    color:rgb(255, 174, 0);
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    padding: 5px;
+    margin-top: 2px;
+    border:2px solid black;
+}
+footer a {
+    margin-left: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+footer .footerImg-container{
+    width:25px;
+    height:25px;
+}
+footer .footerImg-container img{
+    width:100%;
+    height:100%;
+    border: 100px;
+}
+} 
+/*MEDIA QUERY DESDE TABLET*/
+@media screen and (min-width:769px)and (max-width:1500px){
+    body{
+        position: relative;
+    } 
+    body::before {
+        background: rgb(0, 0, 0, 1.5); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }    
+    main{
+        /**/
+        background-image:url(./public/pokemon-fondo.png); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        /**/
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        border: 3px solid black;
+        padding-top: 5px;
+        gap: 10px;
+    }
+    section{
+        flex-direction:row;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding:10px;
+        border: 3px solid yellow;
+    }
+    .pokemon-container{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction:row;
+    }
+    .pokemon {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        /*border: 3px solid white;*/
+    }
+    .pokemon-container > h3, h4{
+        margin: auto;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: rgb(59, 58, 58);
+    }
+    h1{
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 5px;
+        border: 3px solid black;
+        padding: 4px;
+        border-radius: 7px;
+        background-color: yellow;
+    }
+    .search{
+        display: flex;
+        width:350px;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0px;
+    }
+    .search > h3{
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: medium;
+        padding: 5px;
+        color: rgb(0, 0, 0);
+    }
+    .texto{
+        background-color: transparent;
+        margin-top:20px;
+        width: 80%;
+        border: 3px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: auto;
+        padding:8px;
+        border-radius: 5px;
+        background-color: rgb(236, 159, 5);
+    }
+    .texto p{
+        color: black;
+        font-weight: bold;
+    }
+     .subtitulo{
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 5px;
+        border: 3px solid black;
+        padding: 0px;
+        border-radius: 5px;
+        background-color: yellow;
+    }
+    .pokemon-search{
+        width: 55px;
+        text-align: center;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 5px;
+        border: 3px solid black;
+        border-radius: 5px;
+        padding:6px;
+        background-color: yellow;
+    }
+    .search-button{
+        width: 70px;
+        text-align: center;
+        padding:6px;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 5px;
+        border: 3px solid black;
+        border-radius: 5px;
+        background-color: yellow;
+        cursor: pointer;
+    }
+    .imagen-caja{
+     display: flex;
+     flex-wrap:wrap;
+     width: 100%;
+     flex-direction: row;
+    }
+    .caja-grande{
+        align-items: center;
+    }
+    .ul-caja{
+        flex-wrap: wrap;
+        flex-direction: row;
+        display: flex;
+        margin: auto;
+    }
+    .ul-caja .li-caja{
+        width:30%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    } 
+    .ul-caja .li-caja .img-box{
+        width:300px;
+        height:250px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius:15px;
+        border: 2px solid black;
+    }
+    .ul-caja .li-caja .img-box:hover{
+        width:300px;
+        height:300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius:150px;
+    }
+    .img-box img{
+        width:100%;
+        height:100%;
+        animation: giraY 3s linear infinite;
+        cursor: pointer;
+    }
+    .img-box img:hover{
+        width:100%;
+        height:100%;
+        animation: giraY 0s linear infinite;
+        cursor: pointer;
+    }
+    @keyframes giraY {
+        from {
+          transform: rotateY(0deg); 
+        }
+        to {
+          transform: rotateY(360deg);
+         }
+         } 
+    .bajo-img {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 5px;
+        color: black;
+        border: 3px solid black;
+        padding: 3px;
+        border-radius: 5px;
+        background-color: yellow;
+    }
+    .bajo-img:hover {
+        display: flex;
+        width: 250px;
+        background-color: gray;
+        border-radius:10px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top:10px;
+        color:yellow;
+        border: 3px solid black;
+        cursor: pointer;
+        padding: 7px;
+        margin: auto;
+    }
+    .bajo-img > h4:hover{
+        color:rgb(255, 174, 0);
+    }
+    footer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:medium;
+        padding:10px;
+        margin-top: 2px;
+        border:2px solid black;
+    }
+    footer a {
+        margin-left: 3px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+    footer .footerImg-container{
+        width:30px;
+        height:30px;
+    }
+    footer .footerImg-container img{
+        width:100%;
+        height:100%;
+        border-radius: 100px;
+        border: 2px solid white;
+    }
+ }

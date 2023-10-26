@@ -247,7 +247,9 @@ h1{
 }
 /*footer*/
 footer{ 
-    background-color: #224F34;
+    background-image:url(./public/pokemon-fondo.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -532,6 +534,9 @@ footer{
     }
     /*footer*/
     footer{
+        background-image:url(./public/pokemon-fondo.png); 
+        background-size: cover;
+        background-repeat: no-repeat;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;

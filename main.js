@@ -48,7 +48,7 @@ const fetchPokemon = () => {
         id: response.id,
         name: response.name,
         image: response.sprites.front_default,
-        ability: response.types[0].type.name,
+        ability: response.types[0].type.name, 
      }
      renderPokemon();
     })

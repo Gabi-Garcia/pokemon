@@ -8,30 +8,20 @@
 }
  @media screen and (min-width: 320px)and (max-width:768px){ 
 body{
-    position: relative;
-} 
-body::before {
-    background: rgb(0, 0, 0, 1.5); 
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    position: absolute;
-}    
+    background-image:url(./public//pokemonWall.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+} 
+
 main{
-    /**/
-    background-image:url(./public/pokemon-fondo.png); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    /**/
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     margin: auto;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     padding-top: 5px;
     gap: 10px;
 }
@@ -41,7 +31,7 @@ section{
     flex-wrap: wrap;
     width: 100%;
     padding: 0px;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
 }
 .pokemon-container{
     width: 100%;
@@ -75,9 +65,10 @@ h1{
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: 5px;
-    border: 3px solid black;
+    border: 2px solid black;
     padding: 4px;
     border-radius: 5px;
+    font-size: 4rem;
     background-color: yellow;
 }
 .search{
@@ -253,9 +244,9 @@ footer{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    margin-top:0px;
-    padding:15px;
-    border-top:0;
+    margin-top:80px;
+    padding:5px;
+    border-top:4px solid black; ;
     border-left: 4px solid black;
     border-right: 4px solid black;
     border-bottom: 4px solid black;
@@ -272,8 +263,8 @@ footer{
     flex-wrap: wrap;
   }
   footer ul li a .imgFooter{
-    width:40px;
-    height:40px;
+    width:25px;
+    height:25px;
 }
 footer ul li a .imgFooter img{
     width:100%;
@@ -284,77 +275,32 @@ footer ul li a .imgFooter img{
     margin-top:15px;
     display: flex;
     border-radius: 5px;
-    padding:1%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: black;
-    font-weight: 900;
-    border: 2px solid black;
+    font-weight: 600;
     background-color: white;
   }
 } 
 /*MEDIA QUERY DESDE TABLET*/
 @media screen and (min-width:769px)and (max-width:1500px){
     body{
-        position: relative;
+        width: 100%;
+    background-image:url(./public//pokemonWall.jpg);
+   background-size:contain;
+   background-repeat:repeat;
     } 
-    body::before {
-        background: rgb(0, 0, 0, 1.5); 
-        position: absolute;
-        top: 0;
-        left: 0;
+    
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
         width: 100%;
         height: 100%;
-        position: absolute;
-    }    
-    main{
-        /**/
-        background-image:url(./public/pokemon-fondo.png); 
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        /**/
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 100%;
         margin: auto;
-        border: 3px solid black;
         padding-top: 5px;
-        gap: 10px;
+        /* border: 3px solid black; */
     }
-    section{
-        flex-direction:row;
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        padding:10px;
-        border: 3px solid yellow;
-    }
-    .pokemon-container{
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction:row;
-    }
-    .pokemon {
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        /*border: 3px solid white;*/
-    }
-    .pokemon-container > h3, h4{
-        margin: auto;
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        color: rgb(59, 58, 58);
-    }
+ 
     h1{
         margin: auto;
         font-family: Arial, Helvetica, sans-serif;
@@ -363,46 +309,70 @@ footer ul li a .imgFooter img{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-top: 5px;
-        border: 3px solid black;
-        padding: 4px;
+        margin-top: 50px;
+        /* border: 3px solid black; */
+        padding: 15px;
         border-radius: 7px;
+        font-size: 7rem;
         background-color: yellow;
     }
-    .search{
-        display: flex;
-        width:350px;
-        margin: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 0px;
-    }
-    .search > h3{
-        display: flex;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: medium;
-        padding: 5px;
-        color: rgb(0, 0, 0);
-    }
+   
     .texto{
         background-color: transparent;
-        margin-top:20px;
         width: 80%;
         border: 3px solid black;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         margin: auto;
-        padding:8px;
+        margin-top:40px;
+        padding:25px;
         border-radius: 5px;
+        font-size: 1.3rem;
         background-color: rgb(236, 159, 5);
     }
     .texto p{
         color: black;
         font-weight: bold;
     }
+    .pokemon-container > h3, h4{
+        margin: auto;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: rgb(59, 58, 58);
+    }
+    section{
+        /* flex-direction:row; */
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+        padding:0px;
+        /* border: 3px solid yellow; */
+    }
+    .search{
+        display: flex;
+        width:40%;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        /* border: 1px solid violet */
+    }
+    .search > h3{
+        width: 50%;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: medium;
+        padding: 10px;
+        color: rgb(0, 0, 0);
+    }
      .subtitulo{
+        width: 100%;
+        text-align: center;
         margin: auto;
         font-family: Arial, Helvetica, sans-serif;
         color: rgb(0, 0, 0);
@@ -410,13 +380,13 @@ footer ul li a .imgFooter img{
         flex-wrap: wrap;
         flex-direction: column;
         margin-top: 5px;
-        border: 3px solid black;
-        padding: 0px;
+        border: 2px solid black;
+        padding: 15px;
         border-radius: 5px;
         background-color: yellow;
     }
     .pokemon-search{
-        width: 55px;
+        width: 15%;
         text-align: center;
         margin: auto;
         font-family: Arial, Helvetica, sans-serif;
@@ -427,13 +397,13 @@ footer ul li a .imgFooter img{
         margin-top: 5px;
         border: 3px solid black;
         border-radius: 5px;
-        padding:6px;
+        padding:10px;
         background-color: yellow;
     }
     .search-button{
         width: 70px;
         text-align: center;
-        padding:6px;
+        padding:10px;
         margin: auto;
         font-family: Arial, Helvetica, sans-serif;
         color: rgb(0, 0, 0);
@@ -443,50 +413,100 @@ footer ul li a .imgFooter img{
         margin-top: 5px;
         border: 3px solid black;
         border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: 600;
         background-color: yellow;
         cursor: pointer;
     }
-    .imagen-caja{
-     display: flex;
-     flex-wrap:wrap;
-     width: 100%;
-     flex-direction: row;
+    .pokemon-container{
+        width: 100%;
+        /* height: 100%; */
+        min-height:500px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        flex-direction:row;
+        padding:0px;
+        /* justify-content: space-between; */
+        /* border: 1px solid green; */
     }
-    .caja-grande{
+   
+    .pokemon-container > .caja-grande{
+        width: 30%;
+        height:45%;
+        margin-top: 40px;
+        padding: 5px;
         align-items: center;
-    }
-    .ul-caja{
+        /* border: 1px solid red; */
+        }
+
+        .pokemon-container > .caja-grande > .pokemon {
+            width:100%;
+            height: 90%;
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            /* border: 3px solid white; */
+        }
+        .pokemon-container > .caja-grande > .pokemon > .imagen-caja{
+             display: flex;
+             flex-wrap:wrap;
+             width: 90%;
+             height: 90%;
+             margin: auto;
+             margin-top: 0px;
+             flex-direction: row;
+             /* border: 1px solid aqua; */
+            }
+            .pokemon-container > .caja-grande > .pokemon > .imagen-caja >.ul-caja{
         flex-wrap: wrap;
         flex-direction: row;
         display: flex;
         margin: auto;
+        margin-top: 0px;
+        width:95%;
+        height: 100%;
+        /* border:1px solid blue; */
     }
-    .ul-caja .li-caja{
-        width:30%;
+    .pokemon-container > .caja-grande > .pokemon > .imagen-caja >.ul-caja > .li-caja{
+        width: 100%;
+        height:100%;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 0px;
+        /* background-color: white; */
+        /* border:1px solid white */
     } 
-    .ul-caja .li-caja .img-box{
-        width:300px;
-        height:250px;
+    .pokemon-container > .caja-grande > .pokemon > .imagen-caja >.ul-caja > .li-caja > .img-box{
+        width:90%;
+        height:80%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         background-color: white;
-        border-radius:15px;
+        margin: auto;
+        /* border-radius:15px; */
+        /* animation: giraY 3s linear infinite; */
+        cursor: pointer;
         border: 2px solid black;
     }
-    .ul-caja .li-caja .img-box:hover{
-        width:300px;
-        height:300px;
+    .pokemon-container > .caja-grande > .pokemon > .imagen-caja >.ul-caja > .li-caja > .img-box:hover{
+        margin: auto;
+        /* width:230px;
+        height:230px; */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         background-color: white;
-        border-radius:150px;
+        border-radius:100%;
+        animation: giraY 0s linear infinite;
+        cursor: pointer;
     }
     .img-box img{
         width:100%;
@@ -509,31 +529,32 @@ footer ul li a .imgFooter img{
          }
          } 
     .bajo-img {
+        width:80%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-top: 5px;
+        margin:auto;
+        margin-top: 10px;
         color: black;
         border: 3px solid black;
-        padding: 3px;
+        padding: 5px;
         border-radius: 5px;
+        font-size: 1rem;
         background-color: yellow;
     }
     .bajo-img:hover {
-        display: flex;
-        width: 250px;
         background-color: gray;
         border-radius:10px;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-top:10px;
         color:yellow;
         border: 3px solid black;
         cursor: pointer;
-        padding: 7px;
-        margin: auto;
+        align-items: center;
+        margin-top: 10px;
     }
     .bajo-img > h4:hover{
+        font-size: 1rem;
         color:rgb(255, 174, 0);
     }
     /*footer*/
@@ -544,9 +565,10 @@ footer ul li a .imgFooter img{
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        margin-top:0px;
+        margin-top:100px;
         padding:15px;
-        border-top:0;
+        border-top:50px;
+        border-top: 4px solid black;
         border-left: 4px solid black;
         border-right: 4px solid black;
         border-bottom: 4px solid black;
@@ -563,8 +585,8 @@ footer ul li a .imgFooter img{
         flex-wrap: wrap;
       }
       footer ul li a .imgFooter{
-        width:30px;
-        height:30px;
+        width:25px;
+        height:25px;
       }
       footer ul li a .imgFooter img{
         width:100%;
